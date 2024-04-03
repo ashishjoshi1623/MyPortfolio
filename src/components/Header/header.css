@@ -1,0 +1,131 @@
+.navbar-section{
+    background-color: #31363F;
+    padding: 10px 20px;
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    flex-grow: 1;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.pfImg{
+    width: 45px;
+    height: 45px;
+    border-radius: 20%;
+}
+
+.navbar-section p {
+    color : #1ea6d8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.navbar-section p:hover{
+    cursor: pointer;
+}
+
+
+
+.glow-on-hover:hover {
+    text-shadow: 0 0 30px #00ffff;
+}
+
+/* contact button below */
+
+.contact-button {
+    background-color: #ecf9ff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.contact-button:hover {
+    background-color: #eaeaea; /* Lighter background color on hover */
+    color: #007ca9;
+}
+
+/* Focus effect */
+.contact-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Add custom focus outline */
+}
+
+.btn-text{
+    color : #1ea6d8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: #fff;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #1ea6d8;
+    transition: left 0.3s ease;
+}
+
+.menu li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Show menu when input is checked */
+.menu-toggle input:checked + .menu {
+    left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navContainer {
+        display: none; /* Hide navigation links on smaller screens */
+    }
+
+    .pfIcon {
+        margin-right: auto; /* Move portfolio icon to the left on smaller screens */
+    }
+
+    .contactContainer {
+        display: none; /* Move contact button to the right on smaller screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+}
